@@ -12,7 +12,7 @@ const products = [
   {
     name: "RootRise Hair Oil",
     size: "500ml",
-    badge: "Cheapest",
+    badge: "Best Value",
   },
   {
     name: "HydraButter",
@@ -28,42 +28,46 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="products">
+    <section className="products-section" id="products">
 
       <div className="section-heading">
-
         <p>OUR PRODUCTS</p>
 
         <h2>Crafted For Healthy Hair</h2>
 
+        <span>
+          Nature-powered essentials made to nourish, strengthen and
+          restore your hair from root to tip.
+        </span>
       </div>
 
       <div className="product-grid">
 
         {products.map((product) => (
+          <article
+            className="product-card"
+            key={product.name + product.size}
+          >
 
-            <div className="product-card" key={product.name + product.size}>
+            <span className="badge">
+              {product.badge}
+            </span>
 
-                {product.badge && (
-                    <span className="badge">
-                       {product.badge}
-                    </span>
-              )}
-
-                <div className="product-image">
-                    Product Image
-                </div>
-
-                <h3>{product.name}</h3>
-
-                    <p>{product.size}</p>
-
-                <button>
-                     View Product →
-                </button>
-
+            <div className="product-image">
+              Product Image
             </div>
 
+            <div className="product-info">
+              <h3>{product.name}</h3>
+
+              <p>{product.size}</p>
+
+              <button>
+                View Product →
+              </button>
+            </div>
+
+          </article>
         ))}
 
       </div>

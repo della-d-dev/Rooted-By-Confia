@@ -1,0 +1,401 @@
+/* HERO */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 130px 7% 120px;
+
+  background-image: url("/images/hero.png");
+  background-size: cover;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* IMAGE OVERLAY */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 35, 0, 0.78) 0%,
+      rgba(0, 35, 0, 0.58) 38%,
+      rgba(0, 35, 0, 0.12) 75%,
+      rgba(0, 35, 0, 0.08) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 55%;
+
+  max-width: 700px;
+
+  color: #F8F3E7;
+}
+
+
+/* Small brand label */
+
+.hero-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #96fc92;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 14px;
+}
+
+.hero-label::before {
+  content: "";
+
+  width: 48px;
+
+  height: 2px;
+
+  background: #D4AF37;
+}
+
+
+/* Tagline */
+
+.hero-tag {
+  color: #D4AF37;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+  color: #F8F3E7;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1.02;
+
+  font-weight: 600;
+
+  margin-bottom: 24px;
+
+  max-width: 700px;
+}
+
+
+/* Make the final line gold */
+
+.hero h1 br + * {
+  color: #D4AF37;
+}
+
+
+/* Description */
+
+.hero-text {
+  color: #F8F3E7;
+
+  max-width: 530px;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  margin-bottom: 22px;
+}
+
+
+/* RATING */
+
+.hero-rating {
+  margin-bottom: 28px;
+}
+
+.stars {
+  color: #D4AF37;
+
+  font-size: 1.25rem;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 5px;
+}
+
+.hero-rating-text {
+  color: #F8F3E7;
+
+  font-size: 0.82rem;
+
+  opacity: 0.9;
+
+  max-width: 500px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+}
+
+.hero-buttons button {
+  padding: 14px 27px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Primary */
+
+.primary-btn {
+  background: #D4AF37;
+
+  color: #013d01;
+
+  border: 1px solid #D4AF37;
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+  background: rgba(0, 0, 0, 0.12);
+
+  color: #D4AF37;
+
+  border: 1px solid #D4AF37;
+}
+
+
+.hero-buttons button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* TRUST / FEATURE STRIP */
+
+.hero-features {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  background: rgba(0, 28, 0, 0.88);
+
+  backdrop-filter: blur(8px);
+
+  padding: 16px 6%;
+}
+
+
+.hero-feature {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 4px 20px;
+
+  border-right: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.hero-feature:last-child {
+  border-right: none;
+}
+
+
+.hero-feature > span {
+  font-size: 1.3rem;
+}
+
+
+.hero-feature div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.hero-feature strong {
+  color: #F8F3E7;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+
+.hero-feature small {
+  color: #96fc92;
+
+  font-size: 0.65rem;
+}
+
+
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 100vh;
+
+    padding: 130px 7% 150px;
+
+    background-position: 62% center;
+  }
+
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 35, 0, 0.82),
+        rgba(0, 35, 0, 0.58)
+      );
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    text-align: center;
+
+    margin: 0 auto;
+  }
+
+
+  .hero-label {
+    justify-content: center;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+  }
+
+
+  .hero-label::before {
+    display: none;
+  }
+
+
+  .hero-tag {
+    font-size: 0.8rem;
+  }
+
+
+  .hero h1 {
+    font-size: 2.8rem;
+
+    line-height: 1.05;
+  }
+
+
+  .hero-text {
+    font-size: 0.9rem;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .hero-rating-text {
+    font-size: 0.75rem;
+
+    margin: auto;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+
+  .hero-features {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 10px 3%;
+  }
+
+
+  .hero-feature {
+    padding: 8px 5px;
+
+    border-right: none;
+  }
+
+
+  .hero-feature strong {
+    font-size: 0.62rem;
+  }
+
+
+  .hero-feature small {
+    font-size: 0.55rem;
+  }
+
+}

@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section className="about">
-      <div className="about-image">
+    <section className="about-section" id="about">
+      <div className="about-section-image">
         Brand Image
       </div>
 
