@@ -23,7 +23,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="benefits">
+    <section className="benefits" id="benefits">
 
       <div className="section-heading">
         <p>WHY CHOOSE US</p>

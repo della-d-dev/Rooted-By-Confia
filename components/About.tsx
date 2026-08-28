@@ -8,7 +8,7 @@ export default function About() {
       <div className="about-content">
         <p className="section-tag">ABOUT US</p>
 
-        <h2>Rooted in Nature. Driven by Results.</h2>
+        <h2 className="about-heading">Rooted in Nature. Driven by Results.</h2>
 
         <p>
           Rooted By Confia is a premium herbal haircare brand dedicated

@@ -45,12 +45,24 @@
     margin-bottom:15px;
 }
 
-.about-section h2{
+.about-section h2,
+.about-heading{
     color:#D4AF37;
 
     font-size:2.7rem;
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    margin:0 0 25px;
+    text-wrap:balance;
+}
 
-    margin-bottom:25px;
+.about-heading::after{
+    content:"";
+    display:block;
+    width:64px;
+    height:3px;
+    margin-top:16px;
+    background:#96fc92;
 }
 
 .about-section p{

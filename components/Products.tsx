@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const products = [
   {
     name: "RootRise Hair Oil",
@@ -62,9 +64,9 @@ export default function Products() {
 
               <p>{product.size}</p>
 
-              <button>
+              <Link className="product-link" href="/products">
                 View Product →
-              </button>
+              </Link>
             </div>
 
           </article>

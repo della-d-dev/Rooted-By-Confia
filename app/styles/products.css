@@ -116,31 +116,27 @@
 
 /* BUTTON */
 
-.product-card button {
+.product-card button,
+.product-link {
+  display: inline-block;
   background: transparent;
-
   border: 1px solid #D4AF37;
-
   color: #D4AF37;
-
   padding: 11px 18px;
-
   border-radius: 30px;
-
   cursor: pointer;
-
   font-size: 0.9rem;
-
+  text-decoration: none;
   transition:
     background 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
 }
 
-.product-card button:hover {
+.product-card button:hover,
+.product-link:hover {
   background: #D4AF37;
   color: #013d01;
-
   transform: translateY(-2px);
 }
 
