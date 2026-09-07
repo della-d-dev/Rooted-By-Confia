@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* LOGO */}
         <Link href="/" className="navbar-logo">
           <Image
-            src="/images/navlogo.jpeg"
+            src="/Images/navlogo.jpeg"
             alt="Rooted By Confia"
             width={110}
             height={70}
