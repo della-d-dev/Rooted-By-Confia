@@ -1,8 +1,8 @@
 /* BENEFITS SECTION */
 .benefits{
-
-    padding:120px 8%;
-
+    padding: 120px 8%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .benefits-grid{

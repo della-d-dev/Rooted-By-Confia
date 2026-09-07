@@ -172,7 +172,8 @@
   gap: 15px;
 }
 
-.hero-buttons button {
+.hero-buttons button,
+.hero-buttons a {
   padding: 14px 27px;
 
   border-radius: 4px;

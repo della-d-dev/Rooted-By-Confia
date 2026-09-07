@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <section className="about-section" id="about">
-      <div className="about-section-image">
-        Brand Image
+      <div className="about-section-image" aria-label="Brand image space">
+        <span>Brand image space</span>
       </div>
 
       <div className="about-content">
@@ -17,7 +19,9 @@ export default function About() {
           strengthen, moisturize and encourage healthy hair growth.
         </p>
 
-        <button>Read Our Story</button>
+        <Link className="about-cta" href="#hairducation">
+          Read Our Story
+        </Link>
       </div>
     </section>
   );

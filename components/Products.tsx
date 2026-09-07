@@ -55,8 +55,8 @@ export default function Products() {
               {product.badge}
             </span>
 
-            <div className="product-image">
-              Product Image
+            <div className="product-image" aria-label={`${product.name} image space`}>
+              <span>Product image space</span>
             </div>
 
             <div className="product-info">

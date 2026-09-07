@@ -1,5 +1,5 @@
 /* ABOUT SECTION */
-.about-section-section{
+.about-section{
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -12,7 +12,7 @@
 .about-section-image{
     flex:1;
 
-    height:120px;
+    min-height:420px;
 
     background: rgba(255, 255, 255, 0.05);
 
@@ -33,8 +33,9 @@
     font-size:2rem;
 }
 
-.about-section-content{
+.about-content{
     flex:1;
+    max-width: 560px;
 }
 
 .section-tag{
@@ -73,7 +74,7 @@
     margin-bottom:30px;
 }
 
-.about-section button{
+.about-cta{
     padding:16px 34px;
 
     border:none;
@@ -85,7 +86,9 @@
     color:#013d01;
 
     cursor:pointer;
-
+    display:inline-flex;
+    align-items:center;
+    text-decoration:none;
     font-weight:600;
 
     transition:.3s;
