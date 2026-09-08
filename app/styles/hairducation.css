@@ -1,100 +1,107 @@
-/* HAIRUDATION SECTION */
-.hairducation-section{
-
-    padding:120px 8%;
-
+.hairducation-shell {
+  background: #f8f3e7;
+  color: #013d01;
+  min-height: 100vh;
 }
 
-.section-heading{
-
-    text-align:center;
-
-    max-width:700px;
-
-    margin:0 auto 70px;
-
+.hairducation-hero,
+.hairducation-featured,
+.hairducation-topics {
+  width: min(1180px, 88%);
+  margin: 0 auto;
 }
 
-.section-description{
-
-    color:var(--cream);
-
-    line-height:1.8;
-
-    margin-top:20px;
-
+.hairducation-hero {
+  min-height: 720px;
+  padding: 170px 0 90px;
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 100px);
 }
 
-.hairducation-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
-
+.hairducation-eyebrow,
+.hairducation-card-category {
+  color: #8b6b1f;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
-.lesson-card {
-    position: relative;
-    padding: 30px;
-
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-
-    transition: transform 0.3s ease, border-color 0.3s ease;
+.hairducation-hero h1 {
+  margin: 16px 0 22px;
+  color: #013d01;
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  font-weight: 500;
+  letter-spacing: -.08em;
+  line-height: .86;
 }
 
-.lesson-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212, 175, 55, 0.6);
+.hairducation-hero-intro {
+  max-width: 480px;
+  color: #365437;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.65;
 }
 
-.lesson-card:hover{
+.hairducation-hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 36px; flex-wrap: wrap; }
+.hairducation-button { display: inline-flex; align-items: center; gap: 18px; padding: 15px 21px; background: #013d01; color: #f8f3e7; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .04em; transition: transform .25s ease, background .25s ease; }
+.hairducation-button:hover { background: #0b4b0b; transform: translateY(-2px); }
+.hairducation-button--light { background: #f8f3e7; color: #013d01; }
+.hairducation-button--light:hover { background: #96fc92; }
+.hairducation-text-link { color: #013d01; text-decoration: none; font-size: .78rem; font-weight: 700; border-bottom: 1px solid #8b6b1f; padding-bottom: 5px; }
 
-    transform:translateY(-8px);
+.hairducation-image-placeholder { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; background: #dce8d5; color: #013d01; }
+.hairducation-image-placeholder::after { content: ""; position: absolute; width: 58%; aspect-ratio: 1; right: -14%; bottom: -32%; border: 1px solid rgba(1,61,1,.22); border-radius: 50%; box-shadow: 0 0 0 34px rgba(1,61,1,.05), 0 0 0 68px rgba(1,61,1,.04); }
+.hairducation-image-kicker { position: relative; z-index: 1; color: #8b6b1f; font-size: .66rem; letter-spacing: .13em; text-transform: uppercase; }
+.hairducation-image-placeholder strong { position: relative; z-index: 1; max-width: 270px; font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 500; line-height: 1.15; overflow-wrap: anywhere; }
+.hairducation-hero-image { min-height: 500px; background: #b9d1ae; }
+.hairducation-hero-image::before { content: ""; position: absolute; width: 48%; aspect-ratio: .7; top: 14%; left: 28%; border: 1px solid rgba(1,61,1,.28); border-radius: 48% 52% 45% 55%; transform: rotate(17deg); }
 
-    border-color:var(--gold);
+.hairducation-featured { padding: 90px 0; }
+.hairducation-section-heading { max-width: 660px; margin-bottom: 34px; }
+.hairducation-section-heading h2 { margin-top: 13px; max-width: 700px; color: #013d01; font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 500; letter-spacing: -.055em; line-height: .98; }
+.hairducation-featured-card { display: grid; grid-template-columns: 1.05fr .95fr; background: #e8efdf; }
+.hairducation-featured-image { min-height: 420px; background: #c7ddbc; }
+.hairducation-featured-copy { display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: clamp(30px, 6vw, 72px); }
+.hairducation-featured-copy h3, .hairducation-card h3 { color: #013d01; font-size: clamp(1.5rem, 2.8vw, 2.25rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; }
+.hairducation-featured-copy > p:not(.hairducation-card-category), .hairducation-card-copy > p:not(.hairducation-card-category), .hairducation-section-heading--topics > p { color: #49604a; font-size: .98rem; line-height: 1.7; }
+.hairducation-coming-soon { color: #8b6b1f; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
+.hairducation-topics { padding: 30px 0 120px; }
+.hairducation-section-heading--topics { display: flex; align-items: end; justify-content: space-between; gap: 40px; max-width: none; }
+.hairducation-section-heading--topics > p { max-width: 355px; }
+.hairducation-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.hairducation-card { background: #fffdf7; }
+.hairducation-card-stage { aspect-ratio: 1.45; padding: 18px; }
+.hairducation-card-stage--routine { background: #d3e2c9; }
+.hairducation-card-stage--scalp { background: #e0dcc4; }
+.hairducation-card-stage--moisture { background: #c7ddd5; }
+.hairducation-card-stage--protective { background: #dce0c7; }
+.hairducation-card-copy { display: flex; flex-direction: column; gap: 14px; padding: 25px 26px 30px; }
+.hairducation-card-copy h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); }
+.hairducation-read-more { margin-top: 3px; color: #013d01; font-size: .78rem; font-weight: 700; }
+
+.hairducation-cta { padding: 100px 7%; background: #013d01; color: #f8f3e7; text-align: center; }
+.hairducation-cta h2 { max-width: 680px; margin: 14px auto 18px; color: #f8f3e7; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 500; letter-spacing: -.06em; line-height: .98; }
+.hairducation-cta > p:not(.hairducation-eyebrow) { max-width: 450px; margin: 0 auto 30px; color: #cfe4c9; line-height: 1.7; }
+
+@media (max-width: 760px) {
+  .hairducation-hero { min-height: auto; padding: 135px 0 65px; display: flex; flex-direction: column; align-items: stretch; gap: 44px; }
+  .hairducation-hero h1 { font-size: clamp(4.2rem, 20vw, 7rem); }
+  .hairducation-hero-image { min-height: 380px; }
+  .hairducation-featured { padding: 65px 0; }
+  .hairducation-featured-card { grid-template-columns: 1fr; }
+  .hairducation-featured-image { min-height: 300px; }
+  .hairducation-section-heading--topics { display: block; }
+  .hairducation-section-heading--topics > p { margin-top: 20px; }
+  .hairducation-topics { padding: 10px 0 75px; }
+  .hairducation-card-grid { grid-template-columns: 1fr; gap: 18px; }
+  .hairducation-cta { padding: 75px 8%; }
 }
 
-.lesson-icon{
-
-    font-size:2rem;
-
-    margin-bottom:20px;
-
-}
-
-.lesson-card h3{
-
-    color:var(--gold);
-
-    margin-bottom:15px;
-
-}
-
-.lesson-card p{
-
-    color:var(--cream);
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
-}
-
-.lesson-card button{
-
-    background:none;
-
-    border:none;
-
-    color:var(--gold);
-
-    cursor:pointer;
-
-    font-weight:600;
-
+@media (prefers-reduced-motion: reduce) {
+  .hairducation-button { transition: none; }
 }

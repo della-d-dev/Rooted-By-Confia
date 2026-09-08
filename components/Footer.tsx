@@ -29,7 +29,7 @@ export default function Footer() {
 
             <li><Link href="/products">Products</Link></li>
 
-            <li><Link href="#hairducation">Hairducation</Link></li>
+            <li><Link href="/hairducation">Hairducation</Link></li>
 
           </ul>
 
