@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -45,13 +47,13 @@ export default function Hero() {
         {/* Buttons */}
         <div className="hero-buttons">
 
-          <button className="primary-btn">
+          <Link className="primary-btn" href="/products">
             Shop Collection
-          </button>
+          </Link>
 
-          <button className="secondary-btn">
+          <Link className="secondary-btn" href="#about">
             Our Story
-          </button>
+          </Link>
 
         </div>
 
